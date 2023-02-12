@@ -1,5 +1,6 @@
 package com.springbootjpa.springbootjpa.repository.jdbc;
 
+import com.springbootjpa.springbootjpa.entities.Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -11,8 +12,13 @@ import org.springframework.stereotype.Repository;
 public class CourseJdbcRepository {
 
   private static final String INSERT_QUERY = """
-      insert into course (id, name, author)
-      values(1, 'LEARN AWS', 'in28minutes')
+      INSERT INTO course (id, name, author)
+      VALUES (?, ?, ?)
+      """;
+
+  private static final String DELETE_QUERY = """
+      DELETE FROM course
+      WHERE id = ?
       """;
   @Autowired
   private final JdbcTemplate springJdbcTemplate;
@@ -24,8 +30,17 @@ public class CourseJdbcRepository {
   /**
    * Insert method.
    */
-  public void insert() {
-    springJdbcTemplate.update(INSERT_QUERY);
+  public void insert(final Course course) {
+    springJdbcTemplate.update(INSERT_QUERY,
+        course.getId(),
+        course.getName(),
+        course.getAuthor());
   }
 
+  /**
+   * Insert method.
+   */
+  public void deleteById(final long id) {
+    springJdbcTemplate.update(DELETE_QUERY, id);
+  }
 }
