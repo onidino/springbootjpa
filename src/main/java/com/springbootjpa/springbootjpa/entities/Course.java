@@ -1,12 +1,20 @@
 package com.springbootjpa.springbootjpa.entities;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 /**
  * Basic class with the information of courses for the db.
  */
+@Entity(name = "courses")
 public class Course {
 
+  @Id
   private long id;
+  @Column(name = "name")
   private String name;
+  @Column(name = "author")
   private String author;
 
   public Course() {

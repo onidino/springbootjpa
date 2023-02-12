@@ -1,6 +1,7 @@
-package com.springbootjpa.springbootjpa.repository.jdbc;
+package com.springbootjpa.springbootjpa.repository;
 
 import com.springbootjpa.springbootjpa.entities.Course;
+import com.springbootjpa.springbootjpa.repository.jpa.CourseJpaRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,17 +9,20 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 /**
- * Command line runner for testing SQL executions. This executes "run" on start of the application.
+ * Command line runner for testing SQL and JPA executions. (Runs on start of the application).
  */
 @Component
-public class CourseJdbcCommandLineRunner implements CommandLineRunner {
+public class CourseCommandLineRunner implements CommandLineRunner {
 
-  private static final Logger LOG = LoggerFactory.getLogger(CourseJdbcCommandLineRunner.class);
+  private static final Logger LOG = LoggerFactory.getLogger(CourseCommandLineRunner.class);
+
+//  @Autowired
+//  private final CourseJdbcRepository repository;
 
   @Autowired
-  private final CourseJdbcRepository repository;
+  private final CourseJpaRepository repository;
 
-  public CourseJdbcCommandLineRunner(CourseJdbcRepository repository) {
+  public CourseCommandLineRunner(CourseJpaRepository repository) {
     this.repository = repository;
   }
 
