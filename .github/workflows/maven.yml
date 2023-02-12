@@ -12,10 +12,12 @@ on: [push]
 
 jobs:
   build:
+    permissions: write-all
+    name: springboot-jpa
+    environment: dev
     runs-on: ubuntu-latest
 
     steps:
-      - permissions: write-all
       - uses: actions/checkout@v3
       - name: Set up JDK 17
         uses: actions/setup-java@v3
