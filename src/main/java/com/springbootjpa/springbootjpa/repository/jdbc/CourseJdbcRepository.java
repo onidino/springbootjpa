@@ -12,7 +12,7 @@ public class CourseJdbcRepository {
 
   private static final String INSERT_QUERY = """
       insert into course (id, name, author)
-      values(1, "LEARN AWS", "in28minutes");
+      values(1, 'LEARN AWS', 'in28minutes')
       """;
   @Autowired
   private final JdbcTemplate springJdbcTemplate;
