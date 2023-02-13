@@ -1,4 +1,5 @@
-# springbootjpa
+# SPRING BOOT - TESTING JDBC, JPA & SPRING DATA JPA
+
 SpringBoot basic application for test different data repository implementations to save data in H2:
 
 - JDBC Repository: Implementation with SQL explicit queries to write and read data.
@@ -15,8 +16,8 @@ The project has a simple COURSE class corresponding to the following table struc
   primary key (id));
  
  The data can be read in the LOGs of the console:
- 
- ![image](https://user-images.githubusercontent.com/51863674/218346182-3c265868-5479-4422-b5d2-fd3c9a738a7a.png)
+
+![image](https://user-images.githubusercontent.com/51863674/218346182-3c265868-5479-4422-b5d2-fd3c9a738a7a.png)
 
 As well as can be accessed via the H2 Local Console:
 
@@ -25,3 +26,10 @@ http://localhost:8080/h2-console
 ![image](https://user-images.githubusercontent.com/51863674/218346238-ed5d8a9b-b6de-4216-adac-65d197a2707a.png)
 
 (No credentials needed, just clic connect to access the H2 console)
+
+<br><b>Branch Status:<br>
+
+<b>develop<b><br>
+[![Java CI with Maven](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml/badge.svg?branch=develop)](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml)
+<br><b>master<b><br>
+[![Java CI with Maven](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml)
