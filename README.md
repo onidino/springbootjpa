@@ -26,10 +26,3 @@ http://localhost:8080/h2-console
 ![image](https://user-images.githubusercontent.com/51863674/218346238-ed5d8a9b-b6de-4216-adac-65d197a2707a.png)
 
 (No credentials needed, just clic connect to access the H2 console)
-
-<br><b>Branch Status:<br>
-
-<b>develop<b><br>
-[![Java CI with Maven](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml/badge.svg?branch=develop)](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml)
-<br><b>master<b><br>
-[![Java CI with Maven](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/onidino/springbootjpa/actions/workflows/maven.yml)
