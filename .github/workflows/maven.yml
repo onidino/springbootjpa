@@ -13,7 +13,6 @@ on: [push]
 jobs:
   build:
     permissions: write-all
-    name: springboot-jpa
     environment: dev
     runs-on: ubuntu-latest
 
